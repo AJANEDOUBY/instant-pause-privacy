@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Politique de confidentialité — Instant Pause</title>
-<meta name="description" content="Instant Pause ne collecte aucune donnée. Aucun accès réseau, aucun compte, aucun analytics.">
+<title>Privacy Policy — Instant Pause</title>
+<meta name="description" content="Instant Pause collects no data: no network access, no account, no analytics. Available in English, Spanish and French.">
 <meta name="robots" content="index, follow">
 <style>
   :root {
@@ -96,16 +96,354 @@
     font-size: .9rem;
   }
   .top { font-size: .86rem; }
+  .langs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .35rem 1rem;
+    margin: 0 0 2.6em;
+    padding: .75rem 1rem;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    font-size: .94rem;
+  }
+  .langs span { color: var(--muted); }
+  .langs a { font-weight: 600; }
+  .lang-section { scroll-margin-top: 48px; }
+  .lang-section + .lang-section {
+    margin-top: 88px;
+    padding-top: 12px;
+    border-top: 1px solid var(--line);
+  }
+  .lang-section header { border-bottom: none; padding-top: 0; margin-bottom: 0; }
+  .lang-section > header { padding-bottom: 0; }
   @media print {
     body { background: #fff; color: #000; }
     header { padding-top: 0; }
     a { color: #000; }
+    .langs { display: none; }
   }
 </style>
 </head>
 <body>
 <main>
+<a id="top"></a>
 
+<nav class="langs" aria-label="Language / Idioma / Langue">
+  <span>Language:</span>
+  <a href="#english" hreflang="en" lang="en">English</a>
+  <a href="#espanol" hreflang="es" lang="es">Español</a>
+  <a href="#francais" hreflang="fr" lang="fr">Français</a>
+</nav>
+
+<!-- ============================ ENGLISH ============================ -->
+<section class="lang-section" id="english" lang="en">
+<header>
+  <p class="eyebrow">Instant Pause</p>
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated: 3 November 2026 · App <code>com.instantpause.app</code></p>
+</header>
+
+<div class="lead">
+  <p><strong>In one sentence:</strong> Instant Pause collects nothing, sends nothing and has no
+  Internet access. Everything the app knows stays on your phone, in its private storage.</p>
+</div>
+
+<p>Instant Pause is an Android app that helps you resist impulsive calls. This policy explains,
+plainly, what data the app uses and what it does not do with it.</p>
+
+<h2 id="controller">1. Data controller</h2>
+<p>The app's publisher is <strong>JANEDOUBY</strong> (Instant Pause project, formerly
+CoolDown).</p>
+<p>Contact: <a href="mailto:janedouby@gmail.com">janedouby@gmail.com</a> — or, for a public
+report,
+<a href="https://github.com/AJANEDOUBY/instant-pause-privacy/issues" rel="noopener">github.com/AJANEDOUBY/instant-pause-privacy/issues</a></p>
+<p>As no data is transmitted to the publisher, there is no processing register to consult: the
+app has no server.</p>
+
+<h2 id="data">2. Data processed, and only on your device</h2>
+<p>The app stores locally the information it needs to work:</p>
+
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr><th>Data</th><th>Purpose</th><th>Storage</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Protection code</td>
+      <td>Verify that it is really you before weakening the protection</td>
+      <td>Salted PBKDF2 hash (the code is <strong>never</strong> stored in plain text)</td>
+    </tr>
+    <tr>
+      <td>Time windows</td>
+      <td>Know when to intercept calls</td>
+      <td>Private Room database (<code>cooldown.db</code>)</td>
+    </tr>
+    <tr>
+      <td>Allowed contacts</td>
+      <td>Let certain calls through, hung up at 3 minutes</td>
+      <td>Name, international number, displayed number, region</td>
+    </tr>
+    <tr>
+      <td>Block log</td>
+      <td>Show you the intercepted calls</td>
+      <td>Number, timestamp, reason — <strong>purged after 90 days</strong></td>
+    </tr>
+    <tr>
+      <td>Settings</td>
+      <td>Protection state, Zen mode, preferences</td>
+      <td>Private DataStore (<code>cooldown_prefs</code>)</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>This data is stored in the app's <strong>private directory</strong>, which other apps cannot
+read on a non-rooted device.</p>
+
+<h3>Allowed contacts</h3>
+<p>You pick a contact with the <strong>Android contact picker</strong>. The app does
+<strong>not</strong> request the <code>READ_CONTACTS</code> permission: Android only hands it
+the entry you explicitly selected. The full address book stays out of the app's reach.</p>
+
+<h3>The call identifier</h3>
+<p>To decide whether a call should be intercepted, the app receives the dialled number from
+Android, at the time of the call, through the <strong>Call redirection</strong> role you granted.
+That number is analysed in memory, then kept in the local log described above. It is not
+transmitted to anyone.</p>
+
+<h2 id="not-done">3. What the app does not do</h2>
+<ul>
+  <li><strong>No network connection.</strong> The app does not declare the
+  <code>INTERNET</code> permission and embeds no HTTP client.</li>
+  <li><strong>No account.</strong> No sign-up, no email address, no identifier.</li>
+  <li><strong>No analytics, no crash reporting, no advertising SDK.</strong></li>
+  <li><strong>No sharing with third parties.</strong> No data is sold, rented or transmitted.</li>
+  <li><strong>No advertising, no profiling.</strong></li>
+  <li><strong>No access</strong> to your SMS, location, microphone, camera or address book.</li>
+</ul>
+
+<h2 id="permissions">4. Permissions requested and why</h2>
+
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr><th>Permission</th><th>Why</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>Call redirection</strong> role (Telecom)</td><td>Intercept the outgoing call to show the pause screen</td></tr>
+    <tr><td><code>ANSWER_PHONE_CALLS</code></td><td>Automatically hang up at 3 minutes a call to an allowed contact</td></tr>
+    <tr><td>Device administrator</td><td>Slow down an impulsive uninstall. <strong>No policy</strong> is imposed on the device, no remote wipe is possible</td></tr>
+    <tr><td><code>SYSTEM_ALERT_WINDOW</code> / <code>USE_FULL_SCREEN_INTENT</code></td><td>Show the pause screen over the call screen or the lock screen</td></tr>
+    <tr><td><code>POST_NOTIFICATIONS</code> / <code>VIBRATE</code></td><td>Persistent protection notification and haptic feedback</td></tr>
+    <tr><td><code>RECEIVE_BOOT_COMPLETED</code></td><td>Re-enable protection after a reboot</td></tr>
+    <tr><td><code>SCHEDULE_EXACT_ALARM</code></td><td>Trigger windows at the scheduled time</td></tr>
+    <tr><td><code>REQUEST_IGNORE_BATTERY_OPTIMIZATIONS</code></td><td>Prevent Android from putting the protection service to sleep</td></tr>
+    <tr><td><code>FOREGROUND_SERVICE</code>, <code>FOREGROUND_SERVICE_SPECIAL_USE</code></td><td>Keep protection and the call timer active</td></tr>
+  </tbody>
+</table>
+</div>
+
+<p>Each permission can be revoked in the Android settings. Removing the Call redirection role or
+the hang-up permission disables the corresponding protection: this is deliberate, the app cannot
+prevent it.</p>
+
+<h2 id="retention">5. Retention</h2>
+<ul>
+  <li>Windows, contacts and settings: <strong>until the app is uninstalled</strong>.</li>
+  <li>Block log: <strong>90 days</strong> maximum, purged automatically.</li>
+  <li>Protection code: hash kept until it is changed or the app is uninstalled.</li>
+</ul>
+
+<h2 id="rights">6. Your rights (GDPR)</h2>
+<p>You have the right to access, rectify, erase, restrict and object. As no data is transmitted
+to the publisher, these rights are exercised <strong>directly in the app</strong>:</p>
+<ul>
+  <li><strong>Access and rectification</strong>: windows, contacts and settings are visible and
+  editable in the app (with the code).</li>
+  <li><strong>Erasure</strong>: uninstall the app, or clear its data from
+  <em>Settings → Apps → Instant Pause → Storage</em>. Everything disappears with the private
+  storage.</li>
+  <li>The anti-uninstall protection prevents an impulsive uninstall: first deactivate the device
+  administrator in <em>Settings → Security → Device administration</em>, with your code. It is a
+  guardrail against yourself, not data retention.</li>
+</ul>
+<p>Legal basis: performance of the service you request (Article 6(1)(b) GDPR). No processing
+takes place without your action.</p>
+
+<h2 id="security">7. Security</h2>
+<p>The code is kept as a PBKDF2 hash with a random salt and constant-time comparison. Data
+resides in the Android sandbox. The app contains no API key, no server secret, and therefore
+nothing to steal remotely.</p>
+
+<h2 id="children">8. Children</h2>
+<p>The app is not intended for children under 13 and collects no data about them.</p>
+
+<h2 id="changes">9. Changes</h2>
+<p>Any change to this policy will be published at this address and dated at the top of the
+document. If a future version introduced data processing (for example optional synchronisation),
+it would state so explicitly before activation.</p>
+</section>
+
+<!-- ============================ ESPAÑOL ============================ -->
+<section class="lang-section" id="espanol" lang="es">
+<header>
+  <p class="eyebrow">Instant Pause</p>
+  <h1>Política de privacidad</h1>
+  <p class="updated">Última actualización: 3 de noviembre de 2026 · Aplicación <code>com.instantpause.app</code></p>
+</header>
+
+<div class="lead">
+  <p><strong>En una frase:</strong> Instant Pause no recoge nada, no envía nada y no tiene acceso
+  a Internet. Todo lo que la aplicación sabe se queda en tu teléfono, en su espacio de
+  almacenamiento privado.</p>
+</div>
+
+<p>Instant Pause es una aplicación Android que te ayuda a resistir las llamadas impulsivas. Esta
+política explica, sin rodeos, qué datos utiliza la aplicación y qué no hace con ellos.</p>
+
+<h2 id="responsable-es">1. Responsable del tratamiento</h2>
+<p>El editor de la aplicación es <strong>JANEDOUBY</strong> (proyecto Instant Pause, anteriormente
+CoolDown).</p>
+<p>Contacto: <a href="mailto:janedouby@gmail.com">janedouby@gmail.com</a> — o, para una denuncia
+pública,
+<a href="https://github.com/AJANEDOUBY/instant-pause-privacy/issues" rel="noopener">github.com/AJANEDOUBY/instant-pause-privacy/issues</a></p>
+<p>Como no se transmite ningún dato al editor, no existe ningún registro de tratamiento que
+consultar: la aplicación no tiene servidor.</p>
+
+<h2 id="datos">2. Datos tratados, y únicamente en tu dispositivo</h2>
+<p>La aplicación guarda localmente la información necesaria para funcionar:</p>
+
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr><th>Dato</th><th>Finalidad</th><th>Almacenamiento</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Código de protección</td>
+      <td>Comprobar que eres realmente tú antes de debilitar la protección</td>
+      <td>Huella PBKDF2 con sal (el código <strong>nunca</strong> se guarda en claro)</td>
+    </tr>
+    <tr>
+      <td>Franjas horarias</td>
+      <td>Saber cuándo interceptar las llamadas</td>
+      <td>Base Room privada (<code>cooldown.db</code>)</td>
+    </tr>
+    <tr>
+      <td>Contactos autorizados</td>
+      <td>Dejar pasar ciertas llamadas, colgadas a los 3 minutos</td>
+      <td>Nombre, número en formato internacional, número mostrado, región</td>
+    </tr>
+    <tr>
+      <td>Registro de bloqueos</td>
+      <td>Mostrarte las llamadas interceptadas</td>
+      <td>Número, fecha y hora, motivo — <strong>purgado a los 90 días</strong></td>
+    </tr>
+    <tr>
+      <td>Ajustes</td>
+      <td>Estado de la protección, modo Zen, preferencias</td>
+      <td>DataStore privado (<code>cooldown_prefs</code>)</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>Estos datos se guardan en el <strong>directorio privado de la aplicación</strong>, que las
+demás aplicaciones no pueden leer en un dispositivo no rooteado.</p>
+
+<h3>Los contactos autorizados</h3>
+<p>Eliges un contacto con el <strong>selector de contactos de Android</strong>. La aplicación
+<strong>no</strong> solicita el permiso <code>READ_CONTACTS</code>: Android solo le entrega la
+ficha que has designado explícitamente. La agenda completa queda fuera del alcance de la
+aplicación.</p>
+
+<h3>El identificador de llamada</h3>
+<p>Para decidir si una llamada debe interceptarse, la aplicación recibe de Android el número
+marcado, en el momento de la llamada, mediante el rol <strong>Redirección de llamadas</strong>
+que has concedido. Ese número se analiza en memoria y luego se conserva en el registro local
+descrito arriba. No se transmite a nadie.</p>
+
+<h2 id="no-hace">3. Lo que la aplicación no hace</h2>
+<ul>
+  <li><strong>Ninguna conexión de red.</strong> La aplicación no declara el permiso
+  <code>INTERNET</code> y no incluye ningún cliente HTTP.</li>
+  <li><strong>Ninguna cuenta.</strong> Sin registro, sin correo electrónico, sin identificador.</li>
+  <li><strong>Sin analítica, sin informes de fallos, sin SDK publicitario.</strong></li>
+  <li><strong>Ningún intercambio con terceros.</strong> Ningún dato se vende, se alquila ni se
+  transmite.</li>
+  <li><strong>Sin publicidad, sin perfilado.</strong></li>
+  <li><strong>Ningún acceso</strong> a tus SMS, tu ubicación, tu micrófono, tu cámara ni tu
+  agenda.</li>
+</ul>
+
+<h2 id="permisos">4. Permisos solicitados y motivos</h2>
+
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr><th>Permiso</th><th>Motivo</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Rol <strong>Redirección de llamadas</strong> (Telecom)</td><td>Interceptar la llamada saliente para mostrar la pantalla de pausa</td></tr>
+    <tr><td><code>ANSWER_PHONE_CALLS</code></td><td>Colgar automáticamente a los 3 minutos una llamada a un contacto autorizado</td></tr>
+    <tr><td>Administrador de dispositivos</td><td>Frenar una desinstalación impulsiva. <strong>Ninguna política</strong> se impone al dispositivo y no es posible ningún borrado remoto</td></tr>
+    <tr><td><code>SYSTEM_ALERT_WINDOW</code> / <code>USE_FULL_SCREEN_INTENT</code></td><td>Mostrar la pantalla de pausa sobre la pantalla de llamada o de bloqueo</td></tr>
+    <tr><td><code>POST_NOTIFICATIONS</code> / <code>VIBRATE</code></td><td>Notificación permanente de la protección y respuestas hápticas</td></tr>
+    <tr><td><code>RECEIVE_BOOT_COMPLETED</code></td><td>Reactivar la protección tras un reinicio</td></tr>
+    <tr><td><code>SCHEDULE_EXACT_ALARM</code></td><td>Activar las franjas a la hora prevista</td></tr>
+    <tr><td><code>REQUEST_IGNORE_BATTERY_OPTIMIZATIONS</code></td><td>Impedir que Android duerma el servicio de protección</td></tr>
+    <tr><td><code>FOREGROUND_SERVICE</code>, <code>FOREGROUND_SERVICE_SPECIAL_USE</code></td><td>Mantener activas la protección y el temporizador de llamada</td></tr>
+  </tbody>
+</table>
+</div>
+
+<p>Cada permiso puede retirarse desde los ajustes de Android. Retirar el rol de Redirección de
+llamadas o el permiso de colgado desactiva la protección correspondiente: es voluntario, la
+aplicación no puede impedirlo.</p>
+
+<h2 id="conservacion">5. Plazo de conservación</h2>
+<ul>
+  <li>Franjas, contactos y ajustes: <strong>hasta la desinstalación</strong> de la aplicación.</li>
+  <li>Registro de bloqueos: <strong>90 días</strong> como máximo, purgado automáticamente.</li>
+  <li>Código de protección: huella conservada hasta su modificación o la desinstalación.</li>
+</ul>
+
+<h2 id="derechos">6. Tus derechos (RGPD)</h2>
+<p>Tienes derecho de acceso, rectificación, supresión, limitación y oposición. Como no se
+transmite ningún dato al editor, estos derechos se ejercen <strong>directamente en la
+aplicación</strong>:</p>
+<ul>
+  <li><strong>Acceso y rectificación</strong>: las franjas, los contactos y los ajustes son
+  visibles y modificables en la aplicación (con el código).</li>
+  <li><strong>Supresión</strong>: desinstala la aplicación o borra sus datos desde
+  <em>Ajustes → Aplicaciones → Instant Pause → Almacenamiento</em>. Todo desaparece con el
+  almacenamiento privado.</li>
+  <li>La protección anti-desinstalación impide una desinstalación impulsiva: desactiva primero el
+  administrador de dispositivos en <em>Ajustes → Seguridad → Administración del dispositivo</em>,
+  con tu código. Es una barrera contra ti mismo, no una retención de datos.</li>
+</ul>
+<p>Base legal: ejecución del servicio que solicitas (artículo 6.1.b del RGPD). Ningún tratamiento
+tiene lugar sin tu acción.</p>
+
+<h2 id="seguridad">7. Seguridad</h2>
+<p>El código se conserva como una huella PBKDF2 con sal aleatoria y comparación en tiempo
+constante. Los datos residen en el entorno aislado de Android. La aplicación no contiene ninguna
+clave de API ni ningún secreto de servidor, y por tanto nada que robar a distancia.</p>
+
+<h2 id="menores">8. Menores</h2>
+<p>La aplicación no está destinada a menores de 13 años y no recoge ningún dato sobre ellos.</p>
+
+<h2 id="cambios">9. Cambios</h2>
+<p>Cualquier evolución de esta política se publicará en esta dirección y se fechará en la cabecera
+del documento. Si una versión futura introdujera un tratamiento de datos (por ejemplo, una
+sincronización opcional), lo indicaría explícitamente antes de activarse.</p>
+</section>
+
+<!-- ============================ FRANÇAIS ============================ -->
+<section class="lang-section" id="francais" lang="fr">
 <header>
   <p class="eyebrow">Instant Pause</p>
   <h1>Politique de confidentialité</h1>
@@ -196,7 +534,7 @@ ci-dessus. Il n'est transmis à personne.</p>
   répertoire.</li>
 </ul>
 
-<h2 id="permissions">4. Permissions demandées et raisons</h2>
+<h2 id="permissions-fr">4. Permissions demandées et raisons</h2>
 
 <div class="table-wrap">
 <table>
@@ -258,21 +596,12 @@ les concernant.</p>
 <p>Toute évolution de cette politique sera publiée à cette adresse et datée en tête de document.
 Si une version future introduisait un traitement de données (par exemple la synchronisation
 optionnelle), elle le signalerait explicitement avant activation.</p>
-
-<h2 id="english">10. English summary</h2>
-<p lang="en">Instant Pause does <strong>not</strong> collect, transmit or share any data. The app
-has no <code>INTERNET</code> permission, no account, no analytics, no ads and no third-party SDK.
-Your passphrase (stored as a salted PBKDF2 hash), schedules, allow-listed contacts and a block log
-(purged after 90 days) stay in the app's private storage on your device. All permissions are used
-only to intercept calls, show the pause screen, hang up after 3 minutes and keep the protection
-alive; each can be revoked in Android settings. Contact:
-<a href="mailto:janedouby@gmail.com">janedouby@gmail.com</a> —
-<a href="https://github.com/AJANEDOUBY/instant-pause-privacy/issues" rel="noopener">github.com/AJANEDOUBY/instant-pause-privacy/issues</a></p>
+</section>
 
 <footer>
-  <p><strong>Instant Pause</strong> — <code>com.instantpause.app</code>. Cette page ne charge
-  aucune ressource externe : pas de police distante, pas de script de mesure d'audience.</p>
-  <p class="top"><a href="#top">↑ Haut de page</a></p>
+  <p><strong>Instant Pause</strong> — <code>com.instantpause.app</code>. This page loads no external
+  resource: no remote font, no analytics script.</p>
+  <p class="top"><a href="#top">↑ Back to top</a></p>
 </footer>
 
 </main>
