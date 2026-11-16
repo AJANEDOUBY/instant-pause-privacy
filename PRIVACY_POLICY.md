@@ -2,7 +2,7 @@
 
 **English** · [Español](#política-de-privacidad--instant-pause) · [Français](#politique-de-confidentialité--instant-pause)
 
-**Last updated: 3 November 2026**
+**Last updated: 16 November 2026**
 
 Instant Pause (`com.instantpause.app`) is an Android app that helps you resist impulsive calls.
 This policy explains, plainly, what data the app uses and what it does not do with it.
@@ -49,6 +49,14 @@ To decide whether a call should be intercepted, the app receives the dialled num
 at the time of the call, through the **Call redirection** role you granted. That number is
 analysed in memory, then kept in the local log described above. It is not transmitted to anyone.
 
+### The silent mode
+
+If you turn on **Silence during the pause**, the app switches the phone to *Do Not Disturb -
+priority* for the duration of your windows, and remembers the exact setting that was in place
+before, so it can put it back afterwards. That previous value is stored locally, in the app's
+private settings, and never transmitted. If you change the sound mode yourself during a window,
+the app steps back and does not re-apply its own.
+
 ## 3. What the app does not do
 
 - **No network connection.** The app does not declare the `INTERNET` permission and embeds no
@@ -72,6 +80,7 @@ analysed in memory, then kept in the local log described above. It is not transm
 | `SCHEDULE_EXACT_ALARM` | Trigger windows at the scheduled time |
 | `REQUEST_IGNORE_BATTERY_OPTIMIZATIONS` | Prevent Android from putting the protection service to sleep |
 | `FOREGROUND_SERVICE`, `FOREGROUND_SERVICE_SPECIAL_USE` | Keep protection and the call timer active |
+| `ACCESS_NOTIFICATION_POLICY` (Do Not Disturb access) | Silence ringtones during your windows, **only if you turn that option on**. The sound mode set before the window is restored afterwards |
 
 Each permission can be revoked in the Android settings. Removing the Call redirection role or the
 hang-up permission disables the corresponding protection: this is deliberate, the app cannot
@@ -121,7 +130,7 @@ state so explicitly before activation.
 
 [English](#privacy-policy--instant-pause) · **Español** · [Français](#politique-de-confidentialité--instant-pause)
 
-**Última actualización: 3 de noviembre de 2026**
+**Última actualización: 16 de noviembre de 2026**
 
 Instant Pause (`com.instantpause.app`) es una aplicación Android que te ayuda a resistir las
 llamadas impulsivas. Esta política explica, sin rodeos, qué datos utiliza la aplicación y qué no
@@ -170,6 +179,14 @@ en el momento de la llamada, mediante el rol **Redirección de llamadas** que ha
 número se analiza en memoria y luego se conserva en el registro local descrito arriba. No se
 transmite a nadie.
 
+### El modo silencioso
+
+Si activas **Silencio durante la pausa**, la aplicación pone el teléfono en *No molestar -
+prioridad* mientras duran tus franjas, y recuerda el ajuste exacto que había antes para
+restablecerlo después. Ese valor anterior se guarda localmente, en los ajustes privados de la
+aplicación, y no se transmite nunca. Si cambias tú mismo el modo de sonido durante una franja, la
+aplicación se aparta y no vuelve a imponer el suyo.
+
 ## 3. Lo que la aplicación no hace
 
 - **Ninguna conexión de red.** La aplicación no declara el permiso `INTERNET` y no incluye ningún
@@ -193,6 +210,7 @@ transmite a nadie.
 | `SCHEDULE_EXACT_ALARM` | Activar las franjas a la hora prevista |
 | `REQUEST_IGNORE_BATTERY_OPTIMIZATIONS` | Impedir que Android duerma el servicio de protección |
 | `FOREGROUND_SERVICE`, `FOREGROUND_SERVICE_SPECIAL_USE` | Mantener activas la protección y el temporizador de llamada |
+| `ACCESS_NOTIFICATION_POLICY` (acceso a No molestar) | Silenciar los tonos durante tus franjas, **solo si activas esa opción**. El modo de sonido anterior se restablece después |
 
 Cada permiso puede retirarse desde los ajustes de Android. Retirar el rol de Redirección de
 llamadas o el permiso de colgado desactiva la protección correspondiente: es voluntario, la
@@ -243,7 +261,7 @@ sincronización opcional), lo indicaría explícitamente antes de activarse.
 
 [English](#privacy-policy--instant-pause) · [Español](#política-de-privacidad--instant-pause) · **Français**
 
-**Dernière mise à jour : 3 novembre 2026**
+**Dernière mise à jour : 16 novembre 2026**
 
 Instant Pause (`com.instantpause.app`) est une application Android qui vous aide à résister aux
 appels impulsifs. Cette politique explique, sans détour, quelles données l'application utilise et
@@ -292,6 +310,14 @@ composé, au moment de l'appel, via le rôle **Redirection d'appels** que vous a
 numéro est analysé en mémoire, puis conservé dans le journal local décrit ci-dessus. Il n'est
 transmis à personne.
 
+### Le mode silencieux
+
+Si vous activez **Silence pendant la pause**, l'application passe le téléphone en *Ne pas déranger
+- priorité* pendant la durée de vos plages, et mémorise le réglage exact en place avant, pour le
+rétablir ensuite. Cette valeur précédente est stockée localement, dans les réglages privés de
+l'application, et n'est jamais transmise. Si vous changez vous-même le mode sonore pendant une
+plage, l'application s'efface et ne réapplique pas le sien.
+
 ## 3. Ce que l'application ne fait pas
 
 - **Aucune connexion réseau.** L'application ne déclare pas la permission `INTERNET` et n'embarque
@@ -315,6 +341,7 @@ transmis à personne.
 | `SCHEDULE_EXACT_ALARM` | Déclencher les plages à l'heure prévue |
 | `REQUEST_IGNORE_BATTERY_OPTIMIZATIONS` | Empêcher Android d'endormir le service de protection |
 | `FOREGROUND_SERVICE`, `FOREGROUND_SERVICE_SPECIAL_USE` | Maintenir la protection et le minuteur d'appel actifs |
+| `ACCESS_NOTIFICATION_POLICY` (accès « Ne pas déranger ») | Couper les sonneries pendant vos plages, **uniquement si vous activez cette option**. Le mode sonore d'avant la plage est rétabli ensuite |
 
 Chaque permission peut être retirée depuis les réglages Android. Retirer le rôle Redirection
 d'appels ou la permission de raccrochage désactive la protection correspondante : c'est volontaire,

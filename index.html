@@ -142,7 +142,7 @@
 <header>
   <p class="eyebrow">Instant Pause</p>
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: 3 November 2026 · App <code>com.instantpause.app</code></p>
+  <p class="updated">Last updated: 16 November 2026 · App <code>com.instantpause.app</code></p>
 </header>
 
 <div class="lead">
@@ -214,6 +214,13 @@ Android, at the time of the call, through the <strong>Call redirection</strong> 
 That number is analysed in memory, then kept in the local log described above. It is not
 transmitted to anyone.</p>
 
+<h3>The silent mode</h3>
+<p>If you turn on <strong>Silence during the pause</strong>, the app switches the phone to
+<em>Do Not Disturb - priority</em> for the duration of your windows, and remembers the exact
+setting that was in place before, so it can put it back afterwards. That previous value is stored
+locally, in the app's private settings, and never transmitted. If you change the sound mode
+yourself during a window, the app steps back and does not re-apply its own.</p>
+
 <h2 id="not-done">3. What the app does not do</h2>
 <ul>
   <li><strong>No network connection.</strong> The app does not declare the
@@ -242,6 +249,7 @@ transmitted to anyone.</p>
     <tr><td><code>SCHEDULE_EXACT_ALARM</code></td><td>Trigger windows at the scheduled time</td></tr>
     <tr><td><code>REQUEST_IGNORE_BATTERY_OPTIMIZATIONS</code></td><td>Prevent Android from putting the protection service to sleep</td></tr>
     <tr><td><code>FOREGROUND_SERVICE</code>, <code>FOREGROUND_SERVICE_SPECIAL_USE</code></td><td>Keep protection and the call timer active</td></tr>
+    <tr><td><code>ACCESS_NOTIFICATION_POLICY</code> (Do Not Disturb access)</td><td>Silence ringtones during your windows, <strong>only if you turn that option on</strong>. The sound mode set before the window is restored afterwards</td></tr>
   </tbody>
 </table>
 </div>
@@ -292,7 +300,7 @@ it would state so explicitly before activation.</p>
 <header>
   <p class="eyebrow">Instant Pause</p>
   <h1>Política de privacidad</h1>
-  <p class="updated">Última actualización: 3 de noviembre de 2026 · Aplicación <code>com.instantpause.app</code></p>
+  <p class="updated">Última actualización: 16 de noviembre de 2026 · Aplicación <code>com.instantpause.app</code></p>
 </header>
 
 <div class="lead">
@@ -366,6 +374,13 @@ marcado, en el momento de la llamada, mediante el rol <strong>Redirección de ll
 que has concedido. Ese número se analiza en memoria y luego se conserva en el registro local
 descrito arriba. No se transmite a nadie.</p>
 
+<h3>El modo silencioso</h3>
+<p>Si activas <strong>Silencio durante la pausa</strong>, la aplicación pone el teléfono en
+<em>No molestar - prioridad</em> mientras duran tus franjas, y recuerda el ajuste exacto que había
+antes para restablecerlo después. Ese valor anterior se guarda localmente, en los ajustes privados
+de la aplicación, y no se transmite nunca. Si cambias tú mismo el modo de sonido durante una
+franja, la aplicación se aparta y no vuelve a imponer el suyo.</p>
+
 <h2 id="no-hace">3. Lo que la aplicación no hace</h2>
 <ul>
   <li><strong>Ninguna conexión de red.</strong> La aplicación no declara el permiso
@@ -396,6 +411,7 @@ descrito arriba. No se transmite a nadie.</p>
     <tr><td><code>SCHEDULE_EXACT_ALARM</code></td><td>Activar las franjas a la hora prevista</td></tr>
     <tr><td><code>REQUEST_IGNORE_BATTERY_OPTIMIZATIONS</code></td><td>Impedir que Android duerma el servicio de protección</td></tr>
     <tr><td><code>FOREGROUND_SERVICE</code>, <code>FOREGROUND_SERVICE_SPECIAL_USE</code></td><td>Mantener activas la protección y el temporizador de llamada</td></tr>
+    <tr><td><code>ACCESS_NOTIFICATION_POLICY</code> (acceso a No molestar)</td><td>Silenciar los tonos durante tus franjas, <strong>solo si activas esa opción</strong>. El modo de sonido anterior se restablece después</td></tr>
   </tbody>
 </table>
 </div>
@@ -447,7 +463,7 @@ sincronización opcional), lo indicaría explícitamente antes de activarse.</p>
 <header>
   <p class="eyebrow">Instant Pause</p>
   <h1>Politique de confidentialité</h1>
-  <p class="updated">Dernière mise à jour : 3 novembre 2026 · Application <code>com.instantpause.app</code></p>
+  <p class="updated">Dernière mise à jour : 16 novembre 2026 · Application <code>com.instantpause.app</code></p>
 </header>
 
 <div class="lead">
@@ -522,6 +538,13 @@ numéro composé, au moment de l'appel, via le rôle <strong>Redirection d'appel
 avez accordé. Ce numéro est analysé en mémoire, puis conservé dans le journal local décrit
 ci-dessus. Il n'est transmis à personne.</p>
 
+<h3>Le mode silencieux</h3>
+<p>Si vous activez <strong>Silence pendant la pause</strong>, l'application passe le téléphone en
+<em>Ne pas déranger - priorité</em> pendant la durée de vos plages, et mémorise le réglage exact en
+place avant, pour le rétablir ensuite. Cette valeur précédente est stockée localement, dans les
+réglages privés de l'application, et n'est jamais transmise. Si vous changez vous-même le mode
+sonore pendant une plage, l'application s'efface et ne réapplique pas le sien.</p>
+
 <h2 id="pas-fait">3. Ce que l'application ne fait pas</h2>
 <ul>
   <li><strong>Aucune connexion réseau.</strong> L'application ne déclare pas la permission
@@ -551,6 +574,7 @@ ci-dessus. Il n'est transmis à personne.</p>
     <tr><td><code>SCHEDULE_EXACT_ALARM</code></td><td>Déclencher les plages à l'heure prévue</td></tr>
     <tr><td><code>REQUEST_IGNORE_BATTERY_OPTIMIZATIONS</code></td><td>Empêcher Android d'endormir le service de protection</td></tr>
     <tr><td><code>FOREGROUND_SERVICE</code>, <code>FOREGROUND_SERVICE_SPECIAL_USE</code></td><td>Maintenir la protection et le minuteur d'appel actifs</td></tr>
+    <tr><td><code>ACCESS_NOTIFICATION_POLICY</code> (accès « Ne pas déranger »)</td><td>Couper les sonneries pendant vos plages, <strong>uniquement si vous activez cette option</strong>. Le mode sonore d'avant la plage est rétabli ensuite</td></tr>
   </tbody>
 </table>
 </div>
