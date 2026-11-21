@@ -142,7 +142,7 @@
 <header>
   <p class="eyebrow">Instant Pause</p>
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: 16 November 2026 · App <code>com.instantpause.app</code></p>
+  <p class="updated">Last updated: 21 November 2026 · App <code>com.instantpause.app</code></p>
 </header>
 
 <div class="lead">
@@ -216,10 +216,14 @@ transmitted to anyone.</p>
 
 <h3>The silent mode</h3>
 <p>If you turn on <strong>Silence during the pause</strong>, the app switches the phone to
-<em>Do Not Disturb - priority</em> for the duration of your windows, and remembers the exact
-setting that was in place before, so it can put it back afterwards. That previous value is stored
-locally, in the app's private settings, and never transmitted. If you change the sound mode
-yourself during a window, the app steps back and does not re-apply its own.</p>
+<em>Do Not Disturb - priority only</em> for the duration of your windows, and remembers the exact
+setting that was in place before, so it can put it back afterwards. Whether priority calls, repeat
+callers or messaging apps still notify you depends entirely on your own Android Do Not Disturb
+settings. That previous value is stored locally, in the app's private settings, and never
+transmitted. If you change the sound mode yourself during a window, the app steps back and does
+not re-apply its own. If you uninstall the app or revoke Do Not Disturb access while a window is
+active, Android keeps <em>Do Not Disturb</em> enabled until you turn it off manually in your
+phone's quick settings.</p>
 
 <h2 id="not-done">3. What the app does not do</h2>
 <ul>
@@ -249,7 +253,7 @@ yourself during a window, the app steps back and does not re-apply its own.</p>
     <tr><td><code>SCHEDULE_EXACT_ALARM</code></td><td>Trigger windows at the scheduled time</td></tr>
     <tr><td><code>REQUEST_IGNORE_BATTERY_OPTIMIZATIONS</code></td><td>Prevent Android from putting the protection service to sleep</td></tr>
     <tr><td><code>FOREGROUND_SERVICE</code>, <code>FOREGROUND_SERVICE_SPECIAL_USE</code></td><td>Keep protection and the call timer active</td></tr>
-    <tr><td><code>ACCESS_NOTIFICATION_POLICY</code> (Do Not Disturb access)</td><td>Silence ringtones during your windows, <strong>only if you turn that option on</strong>. The sound mode set before the window is restored afterwards</td></tr>
+    <tr><td><code>ACCESS_NOTIFICATION_POLICY</code> (Do Not Disturb access)</td><td>Switch to <em>Do Not Disturb - priority only</em> during your windows, <strong>only if you turn that option on</strong>. The sound mode set before the window is restored afterwards</td></tr>
   </tbody>
 </table>
 </div>
@@ -300,7 +304,7 @@ it would state so explicitly before activation.</p>
 <header>
   <p class="eyebrow">Instant Pause</p>
   <h1>Política de privacidad</h1>
-  <p class="updated">Última actualización: 16 de noviembre de 2026 · Aplicación <code>com.instantpause.app</code></p>
+  <p class="updated">Última actualización: 21 de noviembre de 2026 · Aplicación <code>com.instantpause.app</code></p>
 </header>
 
 <div class="lead">
@@ -376,10 +380,14 @@ descrito arriba. No se transmite a nadie.</p>
 
 <h3>El modo silencioso</h3>
 <p>Si activas <strong>Silencio durante la pausa</strong>, la aplicación pone el teléfono en
-<em>No molestar - prioridad</em> mientras duran tus franjas, y recuerda el ajuste exacto que había
-antes para restablecerlo después. Ese valor anterior se guarda localmente, en los ajustes privados
-de la aplicación, y no se transmite nunca. Si cambias tú mismo el modo de sonido durante una
-franja, la aplicación se aparta y no vuelve a imponer el suyo.</p>
+<em>No molestar - solo prioridad</em> mientras duran tus franjas, y recuerda el ajuste exacto que
+había antes para restablecerlo después. El filtrado de llamadas prioritarias, llamadas repetidas o
+aplicaciones de mensajería depende exclusivamente de tus propios ajustes de No molestar en
+Android. Ese valor anterior se guarda localmente, en los ajustes privados de la aplicación, y no
+se transmite nunca. Si cambias tú mismo el modo de sonido durante una franja, la aplicación se
+aparta y no vuelve a imponer el suyo. Si desinstalas la aplicación o retiras el acceso a No
+molestar mientras una franja está activa, Android mantendrá activado el modo <em>No molestar</em>
+hasta que lo desactives manualmente en los ajustes rápidos del teléfono.</p>
 
 <h2 id="no-hace">3. Lo que la aplicación no hace</h2>
 <ul>
@@ -411,7 +419,7 @@ franja, la aplicación se aparta y no vuelve a imponer el suyo.</p>
     <tr><td><code>SCHEDULE_EXACT_ALARM</code></td><td>Activar las franjas a la hora prevista</td></tr>
     <tr><td><code>REQUEST_IGNORE_BATTERY_OPTIMIZATIONS</code></td><td>Impedir que Android duerma el servicio de protección</td></tr>
     <tr><td><code>FOREGROUND_SERVICE</code>, <code>FOREGROUND_SERVICE_SPECIAL_USE</code></td><td>Mantener activas la protección y el temporizador de llamada</td></tr>
-    <tr><td><code>ACCESS_NOTIFICATION_POLICY</code> (acceso a No molestar)</td><td>Silenciar los tonos durante tus franjas, <strong>solo si activas esa opción</strong>. El modo de sonido anterior se restablece después</td></tr>
+    <tr><td><code>ACCESS_NOTIFICATION_POLICY</code> (acceso a No molestar)</td><td>Activar <em>No molestar - solo prioridad</em> durante tus franjas, <strong>solo si activas esa opción</strong>. El modo de sonido anterior se restablece después</td></tr>
   </tbody>
 </table>
 </div>
@@ -463,7 +471,7 @@ sincronización opcional), lo indicaría explícitamente antes de activarse.</p>
 <header>
   <p class="eyebrow">Instant Pause</p>
   <h1>Politique de confidentialité</h1>
-  <p class="updated">Dernière mise à jour : 16 novembre 2026 · Application <code>com.instantpause.app</code></p>
+  <p class="updated">Dernière mise à jour : 21 novembre 2026 · Application <code>com.instantpause.app</code></p>
 </header>
 
 <div class="lead">
@@ -540,10 +548,15 @@ ci-dessus. Il n'est transmis à personne.</p>
 
 <h3>Le mode silencieux</h3>
 <p>Si vous activez <strong>Silence pendant la pause</strong>, l'application passe le téléphone en
-<em>Ne pas déranger - priorité</em> pendant la durée de vos plages, et mémorise le réglage exact en
-place avant, pour le rétablir ensuite. Cette valeur précédente est stockée localement, dans les
-réglages privés de l'application, et n'est jamais transmise. Si vous changez vous-même le mode
-sonore pendant une plage, l'application s'efface et ne réapplique pas le sien.</p>
+<em>Ne pas déranger - prioritaires uniquement</em> pendant la durée de vos plages, et mémorise le
+réglage exact en place avant, pour le rétablir ensuite. Le filtrage des appels prioritaires, des
+appels répétés ou des applications de messagerie dépend uniquement de vos propres réglages Android
+<em>Ne pas déranger</em>. Cette valeur précédente est stockée localement, dans les réglages privés
+de l'application, et n'est jamais transmise. Si vous changez vous-même le mode sonore pendant une
+plage, l'application s'efface et ne réapplique pas le sien. Si vous désinstallez l'application ou
+lui retirez l'accès <em>Ne pas déranger</em> pendant qu'une plage est active, Android maintient le
+mode <em>Ne pas déranger</em> activé jusqu'à ce que vous le désactiviez manuellement dans les
+réglages rapides du téléphone.</p>
 
 <h2 id="pas-fait">3. Ce que l'application ne fait pas</h2>
 <ul>
@@ -574,7 +587,7 @@ sonore pendant une plage, l'application s'efface et ne réapplique pas le sien.<
     <tr><td><code>SCHEDULE_EXACT_ALARM</code></td><td>Déclencher les plages à l'heure prévue</td></tr>
     <tr><td><code>REQUEST_IGNORE_BATTERY_OPTIMIZATIONS</code></td><td>Empêcher Android d'endormir le service de protection</td></tr>
     <tr><td><code>FOREGROUND_SERVICE</code>, <code>FOREGROUND_SERVICE_SPECIAL_USE</code></td><td>Maintenir la protection et le minuteur d'appel actifs</td></tr>
-    <tr><td><code>ACCESS_NOTIFICATION_POLICY</code> (accès « Ne pas déranger »)</td><td>Couper les sonneries pendant vos plages, <strong>uniquement si vous activez cette option</strong>. Le mode sonore d'avant la plage est rétabli ensuite</td></tr>
+    <tr><td><code>ACCESS_NOTIFICATION_POLICY</code> (accès « Ne pas déranger »)</td><td>Activer <em>Ne pas déranger - prioritaires uniquement</em> pendant vos plages, <strong>uniquement si vous activez cette option</strong>. Le mode sonore d'avant la plage est rétabli ensuite</td></tr>
   </tbody>
 </table>
 </div>
